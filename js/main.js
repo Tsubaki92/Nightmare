@@ -278,16 +278,16 @@ var bre = "</br></br></br></br></br></br></br></br></br></br>"
 
 
 
-// function popup(mylink, windowname) { 
-//     if (! window.focus)
-//     return true; 
-//     var href; 
-//     if (typeof(mylink) == 'string') 
-//     href=mylink; 
-//     else href=mylink.href; 
-//     window.open(href, windowname, 'width=500,height=374,scrollbars=yes'); 
-//     return false;
-// }
+function popup(mylink, windowname) { 
+    if (! window.focus)
+    return true; 
+    var href; 
+    if (typeof(mylink) == 'string') 
+    href=mylink; 
+    else href=mylink.href; 
+    window.open(href, windowname, 'width=500,height=374,scrollbars=yes'); 
+    return false;
+}
 
 let globalFlage = null
   let secCount = 0
@@ -295,12 +295,11 @@ let globalFlage = null
   let printMins = ""
   let printSeconds = ""
 var counter = 0
-  //document.getElementById('bgText').setAttribute('style', "background-color: Transparent;")
-  //document.getElementById('bgText').addEventListener('click' , displayNext)
-
 
 function displayNext() {
   
+
+
   if(minCount === 2){
     clearInterval(globalFlage)
       document.getElementById("secode").innerHTML ="00:00"
@@ -372,7 +371,7 @@ function displayNext() {
             counter++
             break;
             case 8:
-            document.getElementById('bgHtml').innerHTML = scrnarios.scrnario8
+            document.getElementById('bgHtml').innerHTML = bre + scrnarios.scrnario8
             counter++
             break;
             case 9:
