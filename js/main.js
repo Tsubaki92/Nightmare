@@ -33,12 +33,15 @@ const cards = [
       cardClass: "fas fa-fire"
   }
 ]
+
+//duplicate the cards
 const doubleCards = []
 for(var i = 0 ; i < cards.length ; i++){
   doubleCards.push(cards[i])
   doubleCards.push(cards[i])
 }
 
+//random the array
 const randomDoubleCards = []
 
 while (doubleCards.length !== 0){
@@ -47,11 +50,11 @@ while (doubleCards.length !== 0){
   doubleCards.splice(randomIndex , 1);
 }
 
+//add the clicked card id in array
 const cardsInPlay = []
 const cardsInPlayEvent= []
 
 function flipCard1 (){
-
 var cardId = this.getAttribute('id');
 
   cardsInPlay.push(randomDoubleCards[cardId].cardId);
@@ -61,6 +64,7 @@ var cardId = this.getAttribute('id');
   this.setAttribute('class', 'show')
   this.innerHTML = '<i class="'+randomDoubleCards[cardId].cardClass+'"></i>'
   this.removeEventListener('click', flipCard1)
+
 if(cardsInPlay.length === 2){
   checkForMatch();
   }    
