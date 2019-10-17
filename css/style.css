@@ -1,0 +1,317 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900,400italic,700italic,900italic);
+
+body {
+  color: #011a32;
+  font: 16px/1.25 'Raleway', sans-serif;
+  text-align: center;
+}
+.bg{
+    display: flex;
+    align-items: center;
+    /* The image used */
+  background-image: url("bg1.png");
+
+  /* Full height */
+  position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    overflow:hidden;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+iframe {
+  border: transparent;
+}
+
+.animtext{
+ /* animation: text-shadow 3s ease-in-out infinite; */
+  animation: text-shadow 3s ease-in-out ;
+}
+
+.normaltemt{
+  animation: text1 2s linear;
+  
+}
+
+.bgText{
+  opacity: 0.7;
+  width: 800px;
+  height: 200px;
+  text-align: center;
+}
+
+button{
+  width: 800px;
+  height: 100px;
+}
+
+.bgHtml{
+  width: 800px;
+  height: 100%;
+  text-align: center;
+  
+}
+
+p{
+  
+  color: azure;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 0px;
+}
+h1 {
+	background-image: url(somke1.gif);
+	background-size: cover;
+	color: transparent;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	text-transform: uppercase;
+	font-size: 100px;
+	line-height: .75;
+  margin: 10px 0;
+  text-align: center;  
+}
+
+.one{
+    width: 100% ;
+    height:400px;
+    
+}
+
+.bord{
+  width: 800px;
+  
+  height: 605px;
+
+}
+
+
+
+img{
+  width: 100% ;
+  height:400px;
+}
+
+fullP{
+  width: 800px ;
+  height:400px;
+}
+
+@keyframes text-shadow {
+  0% {  
+      transform: translateY(0);
+      text-shadow: 
+          0 0 0 black, 
+          0 0 0 #2cfcfd, 
+          0 0 0 #fb203b, 
+          0 0 0 #fefc4b;
+  }
+  
+ 60% {
+      transform: translateY(-0.25em);
+      text-shadow: 
+          0 0.03125em 0 black, 
+          0 0.0625em 0 #2cfcfd, 
+          0 -0.03125em 0 #fb203b, 
+          0 -0.0625em 0 #fefc4b;
+  } 
+}
+
+@keyframes text1 {
+  0% {  
+    transform: translateX(0);
+    text1: 
+        0 0 0 #fb203b, 
+      
+}
+20% {
+  transform: translateX(-1em);
+  text1:   
+      0 -0.03125em 0 #fb203b, 
+}
+80% {
+    transform: translateX(-0.25em);
+    text1:   
+        0 -0.03125em 0 #fb203b, 
+}
+}
+
+/*Game 1*/
+.container{
+	background-color: hsl(0, 0%, 0%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  width: 500px;
+  font-size: 50px;
+}
+
+.game_board {
+	width: 500px;
+	margin: 0 auto;
+	background: black;
+	box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+	display: grid;
+  align-items: center;
+  justify-content: center;
+	grid-template-columns: auto auto auto auto;
+}
+
+img > .game_board  {
+	border:#000 1px solid;
+	width: 6.7rem;
+	height: 6.7rem;
+	margin: 0.1rem 0.1rem;
+	color: #ffffff;
+	cursor: pointer;
+	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  	background-color: #716F71;
+}
+
+.game_board .card {
+	height: 6.7rem;
+	width: 6.7rem;
+	margin: 0.2rem 0.2rem;
+	background-image: url("images/Tsubaki.png");
+	background-size: cover ;
+	font-size: 0;
+	color: #ffffff;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.game_board .card .show{
+  transform: rotateY(0);
+  background: peru;
+  cursor: default;
+	animation-name: flipInY;
+	-webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-duration: 4.75s;
+}
+
+.game_board .card .match{
+  cursor: default;
+	animation-name: rubberBand;
+	font-size: 33px;
+	background-color: peru;
+	color: black;
+  -webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	animation-duration: 4.75s;
+}
+li {
+	transform: rotateY(0);
+	animation-name: flipInY;
+	animation-duration: .75s;
+	text-decoration: none;
+	font-size: 50px;
+	height: 6.7rem;
+	width: 6.7rem;
+	margin: 0.2rem 0.2rem;
+  color: #ffffff;
+  background-color: gray;
+	cursor: default;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+@keyframes flipInY {
+	from {
+		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+		animation-timing-function: ease-in;
+		opacity: 0;
+	}
+
+	40% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+		animation-timing-function: ease-in;
+	}
+
+	60% {
+		transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+		opacity: 1;
+	}
+
+	80% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+	}
+
+	to {
+		transform: perspective(400px);
+	}
+}
+
+@keyframes rubberBand {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(.95, 1.05, 1);
+	}
+
+	75% {
+		transform: scale3d(1.05, .95, 1);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes pulse {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+		transform: scale3d(1.2, 1.2, 1.2);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+/*Game 2 */
+
+.container1{
+  
+  opacity: 0.8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 600px;
+}
+
+.imges {
+	border:#000 1px solid;
+	width: 9.7rem;
+	height: 9.7rem;
+	cursor: pointer;
+}
+

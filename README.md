@@ -3,9 +3,9 @@
 Nightmare
 ```
 ## Description
-
+```
 The Game is a very simple story-based game ... with 2 mini puzzle games
-
+```
 ### Technical Used
 
 ```
@@ -16,7 +16,20 @@ JavaScript for DOM manipulation
 
 ### Wireframes
 
-Your step by step planning sketch of your project, that you can post them as an image in here.
+- Start Page
+
+![Start Page](start.png)
+
+- Pages
+
+![Start Page](start1.png)
+![Start Page](start2.png)
+
+- End Win
+
+- End Lost
+
+
 
 ### User Stories
 ```
