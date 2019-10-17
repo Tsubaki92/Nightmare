@@ -74,7 +74,6 @@ function checkForMatch(){
       //var show = document.getElementById(randomDoubleCards[cardsInPlay[0]].cardId).getAttribute('type')
       for(var i = 0 ; i < cardsInPlayEvent.length ; i++ ){
           document.getElementById(cardsInPlayEvent[i]).setAttribute('class', 'match')
-          //document.getElementById(cardsInPlayEvent[i]).setAttribute('class', 'show')
           document.getElementById(cardsInPlayEvent[i]).removeEventListener('click', flipCard1)
           cardsInPlay.pop()
       }
@@ -91,7 +90,7 @@ function checkForMatch(){
       }
       cardsInPlayEvent.pop()
       cardsInPlayEvent.pop()
-      },500)  
+      },300)  
   }
 }
 
@@ -260,7 +259,7 @@ const scrnarios = {
   scrnario1: "<p class='normaltemt'>Huh ...</p>",
   scrnario2: "<p class='normaltemt'>Where am I ? ... </br>Why is it so DARK ?</p>",
   scrnario3: "<p class='animtext'>You are a prisoner in your own DREAM ...</br>Your Nightmare</p>",
-  scrnario4: "<p class='animtext'>You must get out within 2 min </br>or you will be sleep forever</p>",
+  scrnario4: "<p class='animtext'>You must get out within 2 min </br>or you will sleep forever</p>",
   scrnario5: "<p class='animtext'>to get out </br>you must solve some puzzles</p>",
   scrnario6: "<p class='animtext'>Remmber you just have </br><strong>2 min<strong></p>",
   scrnario7: "<p class='animtext'>Here is your first puzzle</p>",
@@ -269,7 +268,7 @@ const scrnarios = {
   scrnario10: "<p class='animtext'>Game</p>",
   scrnario11: "<p class='normaltemt'>The End</p>",
   scrnario12: "<p class='animtext'>Game Over</p>",
-  scrnario13: "<p class='animtext'>You.. Manage to Ecaspe</p>"
+  scrnario13: "<p class='animtext'>You.. Manage to Escape .. \nNow you can wake up</p>"
 } 
 
 
@@ -359,6 +358,7 @@ function displayNext() {
             document.getElementById('bord').innerHTML = '<section class="container"><ul class="game_board" id="game-board"></ul></section>'
             document.getElementById('bord').removeAttribute('class')
             createBoard1()
+            popup('assets/instr1.html', 'Instructions')
             setInterval(function(){
             if(counter1 === 6 ){
               console.log(counter1);
@@ -377,6 +377,7 @@ function displayNext() {
             case 9:
                 document.getElementById('bord').innerHTML = '<section class="container1"><ul class="game_board1" id="game_board1"></ul></section>'
                 //document.getElementById('bord').removeAttribute('class')
+                popup('assets/instr2.html', 'Instructions')
                 createBoard2()
                 setInterval(function(){
                   if(counter2 === true ){
@@ -401,7 +402,7 @@ function displayNext() {
             counter++
             break;
             case 12:
-            
+              document.getElementById("secode").innerHTML = '<p id="secode">00:00</p>'
             document.getElementById('bgHtml').innerHTML = '<iframe  class="one" src="assets/index1.html"  ></iframe>'
             document.getElementById('bgHtml').setAttribute('style', "background-color: Transparent;  opacity: 0.8;")
             counter=0
