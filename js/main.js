@@ -290,8 +290,8 @@ var bre = "</br></br></br></br></br></br></br></br></br></br>"
 // }
 
 let globalFlage = null
-  let secCount = 56
-  let minCount = 1
+  let secCount = 0
+  let minCount = 0
   let printMins = ""
   let printSeconds = ""
 var counter = 0
@@ -338,7 +338,7 @@ function displayNext() {
   
         break;
         case 3:
-            document.getElementById('bgHtml').innerHTML = bre +scrnarios.scrnario4
+            document.getElementById('bgHtml').innerHTML = bre +scrnarios.scrnario4 +'<iframe src="assets/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe><audio id="player" autoplay="autoplay" loop><source src="assets/evil.mp3" type="audio/mp3"></audio>'
   
         counter++
         break;
@@ -426,7 +426,7 @@ function displayNext() {
   //     document.getElementById("secode").innerHTML ="00:00"
       
   //  }else{
-    globalFlage = setInterval(Timer,2000)
+    globalFlage = setInterval(Timer,1000)
    }
  // }
 function Timer() {
